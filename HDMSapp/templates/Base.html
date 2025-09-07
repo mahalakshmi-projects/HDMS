@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hospital Management</title>
+  <style>
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    nav a { margin: 0 10px; text-decoration: none; }
+    table { width: 60%; margin-top: 10px; border-collapse: collapse; }
+    td, th { padding: 8px; border: 1px solid #ccc; text-align: center; }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="{% url 'home' %}">Home</a> |
+    <a href="{% url 'patient_list' %}">Patients</a> |
+    <a href="{% url 'add_patient' %}">Add Patient</a>
+  </nav>
+  <hr>
+  {% block content %}{% endblock %}
+</body>
+</html>
